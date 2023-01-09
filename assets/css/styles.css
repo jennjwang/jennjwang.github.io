@@ -619,6 +619,9 @@ img {
 .project_img{
   border-radius: 0.75rem 0.75rem 0rem 0;
   margin-bottom: .75rem;
+  height: 250px;
+  width: 450px;
+  object-fit: cover;
 }
 
 .project_title{
