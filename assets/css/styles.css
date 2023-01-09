@@ -161,7 +161,7 @@ img {
 
 /*==================== LAYOUT ====================*/
 .container {
-  max-width: 768px;
+  max-width: 800px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -496,6 +496,90 @@ img {
 /*==================== SERVICES ====================*/
 
 
+.services_button{
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+.services_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px !important;
+  gap: 3rem;
+}
+
+.services_content{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 0rem 0rem 1rem 0rem;
+  border-radius: .75rem;
+  box-shadow: 0 6px 6px -4px  var(--input-color);
+  transition: .3s;
+  width: 23rem;
+}
+
+.services_content:hover{
+  box-shadow: 0 8px 8px  var(--input-color);
+}
+
+.services_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.services_modal{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.services_modal-content{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.services_modal-services{
+  row-gap: 1rem;
+}
+
+.services_modal-service{
+  display: flex;
+}
+
+.services_modal-title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.services_modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Active Modal */
 
 
@@ -533,7 +617,7 @@ img {
 }
 
 .project_img{
-  border-radius: 0.75rem 0.75rem ;
+  border-radius: 0.75rem 0.75rem 0rem 0;
   margin-bottom: .75rem;
 }
 
@@ -751,6 +835,16 @@ img {
     grid-column: initial;
   }
 
+  .nav_logo{
+    width: 30px;
+    height: 30px;
+    font-size: var(--small-font-size);
+  }
+
+  .about_description{
+    font-size: var(--small-font-size);
+  }
+
   .home_img{
     order: 1;
     justify-self: center;
@@ -853,6 +947,7 @@ img {
 
     .about_description{
       text-align: initial;
+      font-size: var(--normal-font-size);
     }
 
     .about_buttons{
@@ -863,9 +958,9 @@ img {
       grid-template-columns: .5fr;
     }
 
-    .project_img{
+    /* .project_img{
       width: 320px;
-    }
+    } */
 
     .project_content{
       align-items: center;
@@ -916,6 +1011,12 @@ img {
     margin-left: .5rem;
   }
 
+  .nav_logo{
+    width: 40px;
+    height: 40px;
+    font-size: var(--normal-font-size);
+  }
+
   .home_blob{
     width: 320px;
   }
@@ -927,84 +1028,4 @@ img {
   .project_content{
     column-gap: 5rem;
   }
-}
-
-.services_button{
-  cursor: pointer;
-  font-size: var(--small-font-size);
-}
-
-.services_container{
-  gap:1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.services_content{
-  position: relative;
-  background-color: var(--container-color);
-  padding: 0rem 0rem 0rem 1.5rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.15);
-  transition: .3s;
-}
-
-.services_content:hover{
-  box-shadow: 0 4px 8px  rgba(0,0,0,.15);
-}
-
-.services_title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
-.services_modal{
-  position: fixed;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: var(--z-modal);
-  opacity: 0;
-  visibility: hidden;
-  transition: .3s;
-}
-
-.services_modal-content{
-  position: relative;
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.25rem;
-}
-
-.services_modal-services{
-  row-gap: 1rem;
-}
-
-.services_modal-service{
-  display: flex;
-}
-
-.services_modal-title{
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
-}
-
-.services_modal-close{
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-  cursor: pointer;
-}
-
-.active-modal{
-  opacity: 1;
-  visibility: visible;
 }

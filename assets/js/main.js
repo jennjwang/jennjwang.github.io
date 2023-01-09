@@ -131,7 +131,7 @@ sr.reveal(
 sr.reveal(".home_social-icon", {
   interval: 200,
 });
-sr.reveal(".skills_data, .project_card", {
+sr.reveal(".skills_data", {
   interval: 200,
 });
 
