@@ -131,9 +131,12 @@ sr.reveal(
 sr.reveal(".home_social-icon", {
   interval: 200,
 });
-sr.reveal(".skills_data, .services_content, .experience_data", {
-  interval: 200,
-});
+sr.reveal(
+  ".skills_data, .services_content, .experience_data, .contact_content",
+  {
+    interval: 200,
+  }
+);
 
 // const modalViews = document.querySelectorAll(".services_modal"),
 //   modalBtns = document.querySelectorAll(".services_button"),
