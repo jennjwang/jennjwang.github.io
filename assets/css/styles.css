@@ -205,7 +205,7 @@ img {
   width: 40px;
   height: 40px;
   padding: 10px;
-  background-color: #e9be41;
+  background-color: #f2ca54;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -475,9 +475,10 @@ img {
   margin-bottom: var(--mb-1);
 }
 
-.experience_calender{
+.experience_calendar{
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+  margin-bottom: var(--mb-1);
 }
 
 .experience_rounder{
@@ -494,6 +495,10 @@ img {
   height: 100%;
   background-color: var(--first-color);
   transform: translate(6px, -7px);
+}
+
+.experience_content{
+  font-size: var(--small-font-size);
 }
 
 
@@ -679,6 +684,16 @@ img {
   margin-right: var(--mb-0-75);
 }
 
+.contact_title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact_subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
 .contact_content{
   background-color: var(--input-color);
   border-radius: .5rem;
@@ -721,6 +736,11 @@ img {
 .footer_title{
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+}
+
+.footer_title:hover{
+  cursor: pointer;
+  color: #f2ca54;
 }
 
 .footer_subtitle{
@@ -858,14 +878,17 @@ img {
   }
   
   .about_container, 
-  .project_content, 
-  .footer_container{
+  .project_content,
+  .skills_container 
+  .footer_container,
+  .contact_container{
     grid-template-columns: repeat(2, 1fr);
   }
 
   .experience_sections{
     display: grid;
-    grid-template-columns: .6fr;
+    /* grid-template-columns: .9fr; */
+    /* grid-template-columns: .6fr; */
     justify-content: center;
   }
 }
@@ -962,7 +985,7 @@ img {
     }
 
     .experience_sections{
-      grid-template-columns: .5fr;
+      /* grid-template-columns: .5fr; */
     }
 
     /* .project_img{
@@ -1034,5 +1057,13 @@ img {
 
   .project_content{
     column-gap: 5rem;
+  }
+
+  .contact_form{
+    width: 460px;
+  }
+
+  .contact_inputs{
+    grid-template-columns: repeat(2, 1fr);
   }
 }

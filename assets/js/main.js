@@ -121,18 +121,18 @@ const sr = ScrollReveal({
   //     reset: true
 });
 
-sr.reveal(".home_data, .about_img, .skills_subtitle, .skills_text", {});
 sr.reveal(
-  ".home_img, .about_data, .about_title, .about_subtitle, .skills_img",
-  {
-    delay: 400,
-  }
+  ".home_data, .about_title, .about_subtitle, .skills_subtitle, .skills_text",
+  {}
 );
+sr.reveal(".home_img, .skills_img", {
+  delay: 400,
+});
 sr.reveal(".home_social-icon", {
   interval: 200,
 });
 sr.reveal(
-  ".skills_data, .services_content, .experience_data, .contact_content",
+  ".skills_data, .contact_information, .about_data, .about_img, .services_content, .experience_data, .contact_content",
   {
     interval: 200,
   }

@@ -116,7 +116,7 @@
                         <div class="home_data">
                             <h1 class="home_title">Hi, Jenn here!</h1>
                             <h3 class="home_subtitle">Student Developer</h3>
-                            <p class="home_description">I'm a junior at Brown University studying Computer Science and International and Public Affairs with an interest in tech regulation and human-centered computing.</p>
+                            <p class="home_description">I'm a junior at Brown University studying Computer Science and International and Public Affairs with an interest in tech policy and human-centered computing.</p>
                             <a href="#contact" class="button button--flex">
                                 Let's Connect &nbsp;:)
                             </a>
@@ -344,6 +344,9 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         09/2022-12/2022
                                     </div>
+                                    <p class="experience_content">
+                                        I supported a slate of economic recovery programs under the RI Rebounds initiative, a $32M effort to assist small businesses during Covid-19, through data cleaning, aggregation and analysis, metrics tracking, and project workflow management.
+                                    </p>
                                 </div>
                                 <div>
                                     <span class="experience_rounder"></span>
@@ -369,6 +372,8 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         06/2022-08/2022
                                     </div>
+                                    <p class="experience_content">
+                                        I worked on the Billing team under Azure Storage to create a job runner that verifies multidimensional metrics from Azure Monitor against Kusto events. My project closed the validation coverage gap in the Azure Storage billing pipeline for almost 4 million transactions per tenant per day. 
                                 </div>
                             </div>
 
@@ -385,6 +390,9 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         01/2022-05/2022
                                     </div>
+                                    <p class="experience_content">
+                                        I worked under the Collaborative Robotics Laboratory at NIST to to add machine learning support to a robot teaching interface. With the goal of teaching a robot through human demonstration, I implemented long short-term memory networks and reinforcement learning algorithms before collecting results in simulation.
+                                    </p>
                                 </div>
                                 <div>
                                     <span class="experience_rounder"></span>
@@ -411,6 +419,14 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         09/2021-Present
                                     </div>
+                                    <p class="experience_content">
+                                        CS1410 Artificial Intelligence: I sesigned an adversarial multiplayer game based on Pax-Con as the course's final project; teaching knowledge representation and search, optimization, and machine learning algorithms.
+
+                                        <br><br>
+                                        CS0320 Software Engineering: I designed curriculum featuring screen reader development and accessibility; held weekly office hours and mentor meetings for over 200 students, teaching Java, Typescript, and React.
+                                        <br><br>
+                                        CS0100 Data Fluency: I led discussion sections and labs for over 60 students to review and practice computational techniques in data science; assisted with course preparation tailored towards non-concentrators.
+                                    </p>
                                 </div>
                             </div>
 
@@ -427,12 +443,16 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         06/2021-Present
                                     </div>
+                                    <p class="experience_content">
+                                        Reinforcement Learning and Behavior Lab: I built a visual programming editor with Blockly to support non-technical users in interacting with RL systems based on the trigger-action programming paradigm.
+                                        <br><br>
+                                        Intelligent Robot Lab: I helped develop RLang, a declarative language to express prior knowledge to reinforcement learning agents, further integrating symbolic information structures into RL algorithms to improve learning.
+                                    </p>
                                 </div>
                                 <div>
                                     <span class="experience_rounder"></span>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -450,14 +470,39 @@
                 <span class="section_subtitle">Don't worry, I don't bite</span>
 
                 <div class="contact_container container grid">
-                    <form class="contact_form grid" name="contact" netlify>
-                        <div class="contact_content">
-                            <label for="" class="contact_label" name="name">Name</label>
-                            <input type="text" class="contact_input" name="name" required>
+                    <div>
+                        <div class="contact_information">
+                            <i class="uil uil-phone contact_icon"></i>
+                           <div>
+                                <h3 class="contact_title">Cell</h3>
+                                <span class="contact_subtitle">617-356-6076</span>
+                           </div>
                         </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label" name="email">Email</label>
-                            <input type="email" class="contact_input" name="email" required>
+                        <div class="contact_information">
+                            <i class="uil uil-envelope contact_icon"></i>
+                           <div>
+                                <h3 class="contact_title">Email</h3>
+                                <span class="contact_subtitle">jennifer_wang2@brown.edu</span>
+                           </div>
+                        </div>
+                        <div class="contact_information">
+                            <i class="uil uil-map-marker contact_icon"></i>
+                           <div>
+                                <h3 class="contact_title">Location</h3>
+                                <span class="contact_subtitle">69 Brown St., Mail #8924 <br>Providence RI</span>
+                           </div>
+                        </div>
+                    </div>
+                    <form class="contact_form grid" name="contact" netlify>
+                        <div class="contact_inputs grid">
+                            <div class="contact_content">
+                                <label for="" class="contact_label" name="name">Name</label>
+                                <input type="text" class="contact_input" name="name" required>
+                            </div>
+                            <div class="contact_content">
+                                <label for="" class="contact_label" name="email">Email</label>
+                                <input type="email" class="contact_input" name="email" required>
+                            </div>
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label" name="subject">Subject</label>
@@ -484,9 +529,11 @@
             <div class="footer_bg">
                 <div class="footer_container container grid">
                     <div>
+                        <a href="#">
                         <h1 class="footer_title">
                             JW
                         </h1>
+                        </a>
                         <span class="footer_subtitle">
                             Student Developer
                         </span>
