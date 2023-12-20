@@ -132,7 +132,7 @@ sr.reveal(".home_social-icon", {
   interval: 200,
 });
 sr.reveal(
-  ".skills_data, .contact_information, .about_data, .about_img, .services_content, .experience_data, .contact_content",
+  ".skills_data, .about_data, .about_img, .services_content, .experience_data",
   {
     interval: 200,
   }
