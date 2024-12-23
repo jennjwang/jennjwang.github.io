@@ -138,6 +138,16 @@ sr.reveal(
   }
 );
 
+// Add ScrollReveal for the publications section
+sr.reveal(".services.section#publications", {
+  interval: 200,
+});
+
+// // Add ScrollReveal for each <p> in the research publications section
+// sr.reveal("#publications p", {
+//   interval: 150, // Adjust the interval as needed for staggered effect
+// });
+
 // const modalViews = document.querySelectorAll(".services_modal"),
 //   modalBtns = document.querySelectorAll(".services_button"),
 //   modalCloses = document.querySelectorAll(".services_modal-close");
