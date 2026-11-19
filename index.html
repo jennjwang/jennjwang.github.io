@@ -1,726 +1,310 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="Learnport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jennifer Wang</title>
+  <meta name="description" content="Jennifer Wang is a Ph.D. student in Computer Science at Stanford studying how AI is changing work.">
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1d1b19;
+      --soft: #3d3934;
+      --muted: #7a736a;
+      --rule: #e8e2d9;
+      --accent: #9b3426;
+      --bg: #fcfaf6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #ece7df;
+        --soft: #d3cdc4;
+        --muted: #a29b91;
+        --rule: #36322d;
+        --accent: #ec9a86;
+        --bg: #161513;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Newsreader", Georgia, "Times New Roman", serif;
+      font-optical-sizing: auto;
+      font-size: 19px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 940px; margin: 0 auto; padding: 88px 28px 104px; }
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <script src="https://kit.fontawesome.com/3f03faa369.js" crossorigin="anonymous"></script>
-        <!--==================== SWIPER CSS ====================-->
-        <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 0% 1px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size .25s ease;
+    }
+    a:hover { background-size: 100% 1px; }
 
-        <title>Jennifer Wang</title>
-        <link rel="icon" href="icon.png"type="image/x-icon"> 
-    </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEQ6MWLN1H"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    /* ---------- Header ---------- */
+    header {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 44px;
+      align-items: stretch;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 52px;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin: 0 0 10px;
+    }
+    .tagline { font-style: italic; font-size: 20px; color: var(--muted); margin: 0 0 18px; }
+    .bio p { margin: 0 0 12px; color: var(--soft); text-wrap: pretty; }
+    .bio a { color: var(--ink); background-size: 100% 1px; background-position: 0 94%; background-image: linear-gradient(#b9b0a4, #b9b0a4); }
+    .bio a:hover { color: var(--accent); }
+    .side { display: flex; flex-direction: column; align-items: center; }
+    .bio p:last-child { margin-bottom: 0; }
+    .links { display: flex; gap: 28px; margin-top: auto; margin-bottom: 8px; padding-top: 24px; justify-content: center; }
+    .links a { color: #5a544d; background-image: none; display: inline-flex; transition: color .2s ease, transform .2s ease; }
+    .links a:hover { color: var(--accent); transform: translateY(-1px); }
+    .links svg { width: 22px; height: 22px; display: block; }
+    .photo {
+      display: block;
+      width: 264px; height: 264px;
+      object-fit: cover; object-position: 50% 40%;
+      border-radius: 58% 42% 46% 54% / 52% 48% 52% 48%;
+      margin-top: 14px;
+      box-shadow: 16px 16px 0 -2px var(--rule);
+    }
 
-    gtag('config', 'G-JEQ6MWLN1H');
-    </script>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-           <nav class="nav container">
-            <a href="#" class="nav_logo">
-                <b>JW</b></a>
-            <div class="nav_menu" id="nav-menu">
-                <i class="uil uil-times nav_close" id="nav-close"></i>
-                <ul class="nav_list grid">
-                    <li class="nav_item">
-                        <!-- <a href="#home" class="nav_link active-link">
-                            <i class="uil uil-estate nav_icon"></i> Home
-                        </a> -->
-                    </li>
-                    <li class="nav_item">
-                        <a href="#publications" class="nav_link">
-                            <i class="uil uil-user-circle nav_icon"></i> Publications
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#projects" class="nav_link">
-                            <i class="uil uil-wrench nav_icon"></i> Projects
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#experience" class="nav_link">
-                            <i class="uil uil-bag nav_icon"></i>Experience
-                        </a>
-                    </li>
-                    <!-- <li class="nav_item">
-                        <a href="#skills" class="nav_link">
-                            <i class="uil uil-file-alt nav_icon"></i> Skills
-                        </a>
-                    </li> -->
-                    <!-- <li class="nav_item">
-                        <a href="https://www.linkedin.com/in/jennifer-wang-b156b81b1/" class="nav_link">
-                            <i class="uil uil-message nav_icon"></i>Contact
-                        </a>
-                    </li> -->
-                </ul>
-            </div>
-            <div class="nav_btns">
-                <!-- Theme change button -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
+    /* ---------- Sections ---------- */
+    section {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px;
+      margin-top: 48px;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 7px 0 0;
+    }
+    ul { list-style: none; margin: 0; padding: 0; }
+    ul li:last-child { margin-bottom: 0 !important; }
 
-                <div class="nav_toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-           </nav>
-        </header>
+    /* News */
+    .news li { display: grid; grid-template-columns: 112px 1fr; gap: 16px; margin-bottom: 12px; }
+    .news .date { color: var(--muted); font-size: 15px; letter-spacing: 0.06em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home_container container grid">
-                    <div class="home_content grid">
-                        <div class="home_social">
-                            <a href="https://www.linkedin.com/in/jennifer-wang-b156b81b1/" target="_blank" class="home_social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://github.com/jennjwang" target="_blank" class="home_social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                            <!-- <a href="https://www.yelp.com/user_details?userid=ad__FNspVncH11CKbaeYXA" target="_blank" class="home_social-icon">
-                                <i class="fa-brands fa-yelp"></i>
-                            </a> -->
-                        </div>
-                        <div class="home_img">
-                            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    
-                                    <image class="home_blob-img" x='-30' y='-50' xlink:href="assets/img/perfil.png"/>
-                                </g>
-                            </svg>
-                        </div>
+    /* Publications */
+    .note { color: var(--muted); font-size: 15px; font-style: italic; margin: 0 0 22px; }
+    .pubs li { display: grid; grid-template-columns: 112px 1fr; gap: 16px; margin-bottom: 26px; }
+    .pubs .tag {
+      font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); padding-top: 5px; white-space: nowrap;
+    }
+    .pubs .title { display: block; font-weight: 500; font-size: 20px; line-height: 1.35; }
+    .pubs .title a { color: var(--ink); background-image: none; }
+    .pubs .title a:hover { color: var(--accent); }
+    .pubs .authors { display: block; color: var(--soft); font-size: 17px; margin-top: 3px; }
+    .pubs .me { color: var(--ink); font-weight: 600; }
+    .pubs .meta { display: block; font-size: 16px; color: var(--muted); font-style: italic; margin-top: 2px; }
+    .pubs .meta a { font-style: normal; }
 
-                        <div class="home_data">
-                            <h1 class="home_title">Hi, Jenn here!</h1>
-                            <h3 class="home_subtitle"></h3>
-                            <p class="home_description">
-                                I’m a second-year Ph.D. student in Computer Science at Stanford University, advised by Diyi Yang and Erik Brynolfsson. I'm interested in how AI is changing the future of work and how to build models that augment human expertise. 
-                                <!-- <br><br> -->
-                                <!-- My work explores transforming high-level societal objectives (e.g., what it means for a system to be intuitive to use or equitable in its decisions) into operationalizable low-level specifications. -->
-                            </p>
-                            <!-- <a href="https://www.linkedin.com/in/jennifer-wang-b156b81b1/" class="button button--flex">
-                                Let's connect &nbsp;:)
-                            </a> -->
-                        </div>
-                    </div>
+    /* Policy & press */
+    .plain p { margin: 0 0 16px; color: var(--soft); text-wrap: pretty; }
+    .plain b { color: var(--ink); font-weight: 600; }
+    .press-list li { margin-bottom: 10px; color: var(--soft); }
+    .press-list .outlet { font-style: italic; color: var(--ink); }
+    .press-list a.outlet { color: var(--accent); }
 
-                    <div class="home_scroll">
-                        <a href="#about" class="home_scroll-button button--flex">
-                            <span class="home_scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home_scroll-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      display: flex; justify-content: space-between;
+    }
 
-            <!--==================== PUBLICATIONS ==================== -->
-            <section class="services section" id="publications">
-                <h2 class="section_title">Research publications</h2>
-                <!-- <span class="section_subtitle">Shout out to my wonderful collaboraters!</span> -->
+    /* ---------- Small screens ---------- */
+    @media (max-width: 680px) {
+      body { font-size: 18px; }
+      main { padding: 44px 18px 72px; }
+      header { grid-template-columns: 1fr; gap: 28px; }
+      .side { order: -1; align-items: flex-start; }
+      .links { margin-top: 18px; justify-content: flex-start; }
+      .photo { width: 190px; height: 190px; margin-top: 0; box-shadow: 10px 10px 0 -2px var(--rule); }
+      h1 { font-size: 40px; }
+      section { grid-template-columns: 1fr; gap: 14px; margin-top: 40px; }
+      .news li, .pubs li { grid-template-columns: 1fr; gap: 2px; }
+      .pubs .tag { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
 
-                <div class="container" style="max-width: 700px; margin: 0 auto;">
-                    <div style="margin-bottom: 2rem;">
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong class="button-link">Enabling End Users to Program Robots Using Reinforcement Learning. </strong><br>
-                            Tewodros Ayalew*, <b>Jennifer Wang*</b>, Michael Littman, Blase Ur, Sarah Sebo. <br>
-                            <em>IEEE/ACM International Conference on Human-Robot Interaction (HRI 2025)</em><br>
-                            <!-- <a href="#" class="button-link">[ PDF ]</a> -->
-                        </p>
+  <header>
+    <div>
+      <h1>Jennifer Wang</h1>
+      <p class="tagline">Ph.D. student in Computer Science, Stanford University</p>
+      <div class="bio">
+        <p>I study how AI is changing work and how to build AI systems that enhance human expertise. I'm advised by <a href="https://cs.stanford.edu/~diyiy/">Diyi Yang</a> and <a href="https://digitaleconomy.stanford.edu/people/erik-brynjolfsson/">Erik Brynjolfsson</a> and supported by an NSF Graduate Research Fellowship. Right now I am building <a href="https://digitaleconomy.stanford.edu/project/tasknet/">TaskNet</a>, a next-generation occupational task inventory.</p>
+        <p>Before Stanford, I received my B.S. in Computer Science from Brown University, advised by Suresh Venkatasubramanian. Previously, I worked on AI policy at the White House OSTP, Brookings, and Mozilla.</p>
+      </div>
 
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong><a class="button-link" href="https://www.brookings.edu/articles/how-the-national-artificial-intelligence-research-resource-can-pilot-inclusive-ai/">
-                                How the National Artificial Intelligence Research Resource can pilot
-                                inclusive AI.</a></strong><br>
-                            <b>Jennifer Wang</b>, Mark Muro<br>
-                            <em>Brookings Institution (2024).</em><br>
-                        </p>
+    </div>
+    <div class="side">
+      <img class="photo" src="assets/img/jenn.jpg" alt="Photo of Jennifer Wang">
+      <nav class="links" aria-label="Contact and profiles">
+        <a href="mailto:jennjwang@stanford.edu" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M2.2 4.8h19.6v14.4H2.2z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m2.6 5.3 9.4 7.6 9.4-7.6"/></svg></a>
+        <a href="https://github.com/jennjwang" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.96c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+        <a href="https://www.linkedin.com/in/jennifer-wang-b156b81b1/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      </nav>
+    </div>
+  </header>
 
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong><a class="button-link" href="https://votekit.readthedocs.io/en/latest/">Votekit: A Python Package For Computational Social Choice Research. </a></strong><br>
-                                Christopher Donnay, Moon Duchin, Jack Gibson, Zach Glaser, Andrew Hong, Malavika Mukundan, <b>Jennifer Wang</b> (Authors listed in alphabetical order)<br>
-                            <em>Under review at Journal of Open Source Software 2024.</em><br>
-                        </p>
+  <section class="news" aria-labelledby="news-h">
+    <h2 id="news-h">News</h2>
+    <ul>
+      <li><span class="date">Nov 2026</span><span><a href="https://www.nber.org/papers/w35987">TaskNet</a> is out as an NBER working paper.</span></li>
+      <li><span class="date">Oct 2026</span><span>Our paper on gaps between API benchmarks and chatbot performance appears at <a href="https://aclanthology.org/2026.emnlp-main.2462/">EMNLP 2026</a>.</span></li>
+      <li><span class="date">2026</span><span>Awarded the NSF Graduate Research Fellowship.</span></li>
+      <li><span class="date">Mar 2026</span><span>Our paper on regulating general-purpose AI appears at <a href="https://doi.org/10.1145/3788646.3789523">CSLAW 2026</a>.</span></li>
+      <li><span class="date">Oct 2025</span><span>Our audit of AI companies' White House commitments appears at <a href="https://ojs.aaai.org/index.php/AIES/article/view/36743">AIES 2025</a>, with coverage in <a href="https://www.fastcompany.com/91389117/biden-era-ai-safety-promises-arent-holding-up-and-apples-the-weakest-link"><i>Fast Company</i></a> and <a href="https://subscriber.politicopro.com/newsletter/2025/10/these-biden-ai-rules-still-matter-under-trump-00624354"><i>Politico Pro</i></a>.</span></li>
+      <li><span class="date">Sep 2025</span><span>Started my Ph.D. at Stanford.</span></li>
+    </ul>
+  </section>
 
-                        <p style="margin-bottom: 1.5rem;"></p>
-                            <strong><a class="button-link" href="https://arxiv.org/abs/2409.01984">Observing Context Improves Disparity Estimation when Race is Unobserved. </a></strong><br>
-                                Kweku Kwegyir-Aggrey, Naveen Durvasula, <b>Jennifer Wang</b>, Suresh Venkatasubramanian<br>
-                            <em>Proceedings of AAAI Conference on AI, Ethics, and Society (AIES 2024).</em><br>
-                        </p>
+  <section class="pubs" aria-labelledby="pubs-h">
+    <h2 id="pubs-h">Publications</h2>
+    <div>
+      <p class="note">* denotes equal contribution</p>
+      <ul>
+        <li>
+          <span class="tag">NBER '26</span>
+          <div>
+            <span class="title"><a href="https://www.nber.org/papers/w35987">TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale</a></span>
+            <span class="authors"><span class="me">Jennifer Wang*</span>, Andreas Haupt*, Isaac Robinson, Phil Lewis, Erik Brynjolfsson, Diyi Yang</span>
+            <span class="meta">NBER Working Paper</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">EMNLP '26</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2609.08861">API Benchmark Scores Do Not Reliably Transfer to Chatbot Interfaces</a></span>
+            <span class="authors"><span class="me">Jennifer Wang</span>, Joachim Baumann, Daniel E. Ho, Sanmi Koyejo</span>
+            <span class="meta">Empirical Methods in Natural Language Processing</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">CSLAW '26</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2506.17347">Distinguishing Task-Specific and General-Purpose AI in Regulation</a></span>
+            <span class="authors"><span class="me">Jennifer Wang</span>, Andrew Selbst, Solon Barocas, Suresh Venkatasubramanian</span>
+            <span class="meta">ACM Symposium on Computer Science and Law</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">AIES '25</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2508.08345">Do AI Companies Make Good on Voluntary Commitments to the White House?</a></span>
+            <span class="authors"><span class="me">Jennifer Wang</span>, Kayla Huang, Kevin Klyman, Rishi Bommasani</span>
+            <span class="meta">Featured in <a href="https://www.fastcompany.com/91389117/biden-era-ai-safety-promises-arent-holding-up-and-apples-the-weakest-link">Fast Company</a> and <a href="https://subscriber.politicopro.com/newsletter/2025/10/these-biden-ai-rules-still-matter-under-trump-00624354">Politico Pro</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">HAI '25</span>
+          <div>
+            <span class="title"><a href="https://hai.stanford.edu/policy/assessing-the-implementation-of-federal-ai-leadership-and-compliance-mandates">Assessing the Implementation of Federal AI Leadership and Compliance Mandates</a></span>
+            <span class="authors"><span class="me">Jennifer Wang*</span>, Mirac Suzgun*, Caroline Meinhardt, Daniel Zhang, Kazia Nowacki, Daniel E. Ho</span>
+            <span class="meta">Stanford Institute for Human-Centered AI</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">Mozilla '25</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2501.08365">Towards Best Practices for Open Datasets for LLM Training</a></span>
+            <span class="authors">Stefan Baack, Stella Biderman, Kasia Odrozek, &hellip;, <span class="me">Jennifer Wang</span>, &hellip;, Thomas Wolf</span>
+            <span class="meta">Mozilla Foundation and EleutherAI</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">HRI '25</span>
+          <div>
+            <span class="title"><a href="https://hri.cs.uchicago.edu/publications/HRI_2025_Ayalew_Enabling_End_Users_to_Program_Robots_Using_Reinforcement_Learning.pdf">Enabling End Users to Program Robots Using Reinforcement Learning</a></span>
+            <span class="authors">Tewodros Ayalew*, <span class="me">Jennifer Wang*</span>, Michael Littman, Blase Ur, Sarah Sebo</span>
+            <span class="meta">ACM/IEEE International Conference on Human-Robot Interaction</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">AIES '24</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2409.01984">Observing Context Improves Disparity Estimation when Race is Unobserved</a></span>
+            <span class="authors">Kweku Kwegyir-Aggrey, Naveen Durvasula, <span class="me">Jennifer Wang</span>, Suresh Venkatasubramanian</span>
+            <span class="meta">AAAI/ACM Conference on AI, Ethics, and Society</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">Brookings '24</span>
+          <div>
+            <span class="title"><a href="https://www.brookings.edu/articles/how-the-national-artificial-intelligence-research-resource-can-pilot-inclusive-ai/">How the National Artificial Intelligence Research Resource Can Pilot Inclusive AI</a></span>
+            <span class="authors"><span class="me">Jennifer Wang</span>, Mark Muro</span>
+            <span class="meta">Featured in <a href="https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2024/07/15/pilot-program-gives-academics-access">Inside Higher Ed</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">JOSS '24</span>
+          <div>
+            <span class="title"><a href="https://joss.theoj.org/papers/10.21105/joss.07477">VoteKit: A Python Package for Computational Social Choice Research</a></span>
+            <span class="authors">Christopher Donnay, Moon Duchin, Jack Gibson, Zach Glaser, Andrew Hong, Malavika Mukundan, <span class="me">Jennifer Wang</span> (alphabetical)</span>
+            <span class="meta">Journal of Open Source Software</span>
+          </div>
+        </li>
+        <li>
+          <span class="tag">ICML '23</span>
+          <div>
+            <span class="title"><a href="https://arxiv.org/abs/2208.06448">RLang: A Declarative Language for Expressing Prior Knowledge for Reinforcement Learning</a></span>
+            <span class="authors">Rafael Rodriguez-Sanchez*, Benjamin Spiegel*, <span class="me">Jennifer Wang</span>, Roma Patel, Stefanie Tellex, George Konidaris</span>
+            <span class="meta">International Conference on Machine Learning</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-                        <p style="margin-bottom: 1.5rem;"></p>
-                            <strong><a class="button-link" href="https://arxiv.org/abs/2208.06448">RLang: A Declarative Language for Expressing Prior Knowledge for Reinforcement
-                                Learning. </a></strong><br>
-                                Rafael Rodriguez-Sanchez*, Benjamin Spiegel*, <b>Jennifer Wang</b>, Roma Patel, Stefanie Tellex, George Konidaris.<br>
-                            <em>Proceedings of International Conference in Machine Learning (ICML 2023).</em><br>
-                        </p>
-                    </div>
-                </div>
+  <section aria-labelledby="press-h">
+    <h2 id="press-h">Press</h2>
+    <ul class="press-list">
+      <li><a class="outlet" href="https://subscriber.politicopro.com/newsletter/2025/10/these-biden-ai-rules-still-matter-under-trump-00624354">Politico Pro</a> &mdash; These Biden AI rules still matter under Trump</li>
+      <li><a class="outlet" href="https://www.fastcompany.com/91389117/biden-era-ai-safety-promises-arent-holding-up-and-apples-the-weakest-link">Fast Company</a> &mdash; Biden-era AI safety promises aren't holding up, and Apple's the weakest link</li>
+      <li><a class="outlet" href="https://posts.cs.brown.edu/2024/10/18/brown-cs-student-jenn-wang-receives-a-pit-un-grant-to-support-the-tech-policy-fellowship-she-co-created/">Brown CS News</a> &mdash; on the Paragon Policy Fellowship's PIT-UN grant</li>
+      <li><a class="outlet" href="https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2024/07/15/pilot-program-gives-academics-access">Inside Higher Ed</a> &mdash; A pilot program gives academics access to supercomputers</li>
+      <li><a class="outlet" href="https://www.brown.edu/news/2024-04-19/goldwater-truman">Brown University News</a> &mdash; Five Brown students earn Truman, Goldwater scholarships</li>
+    </ul>
+  </section>
 
-            </section>
+  <footer>
+    <span>Jennifer Wang</span>
+    <span>Updated November 2026</span>
+  </footer>
 
-            <!--==================== ABOUT ====================-->
-           <!-- <section class="about section" id="about"> -->
-                <!-- <h2 class="about_title section_title">Nice to meet you!</h2>
-                <span class="about_subtitle section_subtitle">Here is a bit about me</span>
-                <div class="about_container container grid">
-                    <img src="assets/img/about.jpg" alt="" class="about_img">
-                    <div class="about_data">
-                        <p class="about_description"> 
-                            My friends describe me in three words: curious, driven, and loud, with emphasis on the last one. If we're ever in the same room, you'll probably hear my laugh before meeting me (see a photo of me and Arati sharing a good chuckle)!
-                            <br></br>
-                            I describe myself as an optimist at heart and a cautionist by training. I believe technology presents opportunities to tackle society's greatest challenges but only with the necessary guardrails to ensure safe and responsible use. This belief has guided my work, from exploring models for human-robot collaboration at NIST to researching policies that mitigate AI risks at OSTP.
-                        </p>
-                    </div>
-                </div> -->
-            <!-- </section> -->
-
-            <section class="services section" id="projects">
-                <h2 class="about_title section_title">Check out my projects!</h2>
-                <span class="about_subtitle section_subtitle">Some fun things I've worked on</span>
-
-                <div class="services_container container grid">
-
-                <!-- project 1-->
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/paragon.jpg" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">Paragon Policy Fellowship</h3>
-                            <p class="project_description">
-                                The Paragon fellowship is an opportunity for students to explore and gain experience working on science and tech policy issues in their state and local governments.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://www.paragonfellowship.org/" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div>
-
-                    <!-- project 1-->
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/mggg.png" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">VoteKit</h3>
-                            <p class="project_description">
-                                VoteKit, nicknamed “a Swiss army knife for social choice research”, is a Python package for researchers to study any stage of the ranked-choice voting election process.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://mggg.github.io/VoteKit/" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div>
-
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/eup.jpg" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">End-User Robot Program</h3>
-                            <p class="project_description">
-                                The End-User Robot Program is a project under <a href="http://rlab.cs.brown.edu/index.html">the RLAB</a> to study ways non-experts can interact with reinforcement learning systems through different programming paradigms in a visual interface.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://github.com/jennjwang/eup-blockly" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- project 1-->
-                    <!-- <div class="services_content">
-                        <div>
-                            <img src="assets/img/arview.PNG" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">AR/VR Pictionary</h3>
-                            <p class="project_description">
-                                A real-time multiplayer game of pictionary created as a proof-of-concept for collaborative drawing in VR and AR, built using Unity and Normcore.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://github.com/jennjwang/arvr-pictionary" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div> -->
-
-                    <!-- project 2 -->
-                    <!-- <div class="services_content">
-                        <div>
-                            <img src="assets/img/sample_dataset.png" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                                <h3 class="services_title">Deepfake Facial Detection</h3>
-                                <p class="project_description">
-                                    In a group of four, I implemented a deepfake facial detector using MTCNN for feature extraction and EfficientNetB0 to categorize real vs. fake faces in video clips.
-                                </p>
-                            </div>
-                        </div>
-                        <a href="https://github.com/jennjwang/deepfake-detection" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div> -->
-
-                    <!-- project 3 -->
-                    <!-- <div class="services_content">
-                        <div>
-                            <img src="assets/img/rlang.png" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">RLang</h3>
-                            <p class="project_description">
-                                A Domain-Specific Language for communicating domain knowledge to an RL agent. Using RLang, you can specify information about every element of a Markov Decision Process to bootstrap the agent's learning (Presented at RLDM 2022). 
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://rafarodsa.github.io/rlang_rldm2022.pdf" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                        
-                    </div> -->
-
-                    <!-- project 4 -->
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/hrc.jpg" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">Robotic Teaching Interface</h3>
-                            <p class="project_description">
-                                The Robot Teaching Interface is a research project at <a href="https://www.nist.gov/collaborative-robots">NIST</a>, to which I added reinforcement learning algorithm support so that 
-                                goals can be given to the robot arm to perform pick-and-place tasks.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://github.com/shelly-bagchi/robot-learning-interface/tree/main" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                    </div>
-
-                    <!-- project 5
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/hab.png" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title">Hack@Brown</h3>
-                            <p class="project_description">
-                                I led a team of ten full-stack developers to build a mobile responsive website for Brown’s annual hackathon, using React, Typescript, and Firebase, and completing the Agile development process. 
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://2022.hackatbrown.org/" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                        <div class="services_modal">
-                            <div class="services_modal-content">
-                                <h4 class="services_modal-title">Project 1</h4>
-                                <p>
-                                    fwoifhwoihfiowhfoiw
-                                </p>
-                                <i class="uil uil-times services_modal-close"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services_content">
-                        <div>
-                            <img src="assets/img/nws.png" alt="" class="project_img">
-                            <div style="padding: 1rem 1.5rem 1rem 2rem;">
-                            <h3 class="services_title"> Redesigning the National Weather Service</h3>
-                            <p class="project_description">
-                                I redesigned a webpage under the National Weather Service to add mobile responsiveness and improve its usability, memorability, and learnability.
-                            </div>
-                        </p>
-                        </div>
-                        <a href="https://portfolio-ten-pi-71.vercel.app/redesign/redesign" target="_blank" class="button button-flex button-small button-link services_button" style="padding-left: 2rem;">
-                            Learn More 
-                            <i class="uil uil-arrow-right button_icon"></i>
-                        </a>
-                        <div class="services_modal">
-                            <div class="services_modal-content">
-                                <h4 class="services_modal-title">Project 1</h4>
-                                <p>
-                                    fwoifhwoihfiowhfoiw
-                                </p>
-                                <i class="uil uil-times services_modal-close"></i>
-                            </div>
-                        </div>
-                    </div> -->
-
-                </div>
-            </section>
-
-            <!--==================== EXPERIENCE ====================-->
-            <section class="experience section" id="experience">
-                <h2 class="section_title">Where is Jenn?</h2>
-                <span class="section_subtitle">Some cool places I've worked at</span>
-                <div class="experience-container container">
-                    <div class="experience_sections">
-                        <div class="experience_content">
-
-
-                            <!-- <div class="experience_data">
-                                <div>
-                                    <h3 class="experience_title">
-                                        Project Associate
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Mozilla Foundation
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        03/2024 - Present
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-                            </div> -->
-                            
-                            <div class="experience_data">
-                                <div></div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="experience_title">
-                                        Research Intern
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Brookings Institute
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        01/2024 - 05/2024
-                                    </div>
-                                    <p class="experience_content"></p>
-                                        I authored commentary on the challenges the NAIRR pilot faces in democratizing AI research.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="experience_data">
-                                <div>
-                                    <h3 class="experience_title">
-                                        Policy Intern
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        White House Office of Science and Technology Policy
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        09/2023 - 12/2023
-                                    </div>
-                                    <p class="experience_content">
-                                        I supported Deputy U.S. Chief Technology Officer in advancing the Executive Order on AI.
-                                    </p>
-                                </div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-                            </div>
-
-                            <div class="experience_data">
-                                <div></div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="experience_title">
-                                        Civic Digital Fellow
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        U.S. Census Bureau
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        09/2023-12/2023
-                                    </div>
-                                    <p class="experience_content">
-                                        I analyzed the contributions of 10+ federal data sources to race and ethnicity records.
-                                </div>
-                            </div>
-
-                            <!-- Experience 1 -->
-                            <div class="experience_data">
-                                <div>
-                                    <h3 class="experience_title">
-                                        Impact Analytics Intern
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Rhode Island State Government
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        09/2022-12/2022
-                                    </div>
-                                    <p class="experience_content">
-                                        I analyzed data for RI Rebounds, a $32 M effort to assist small businesses during Covid-19.
-                                    </p>
-                                </div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-                            </div>
-                            <!-- Experience 2 -->
-                            <div class="experience_data">
-                                <div></div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="experience_title">
-                                        Software Engineering Intern
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Microsoft Corporation
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        06/2022-08/2022
-                                    </div>
-                                    <p class="experience_content">
-                                        I worked on the Billing team at Azure Storage to validate metrics across the billing pipeline.
-                                </div>
-                            </div>
-
-                            <!-- Experience 3 -->
-                            <div class="experience_data">
-                                <div>
-                                    <h3 class="experience_title">
-                                        Research Assistant
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        National Institute of Standards and Technology
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        01/2022-05/2022
-                                    </div>
-                                    <p class="experience_content">
-                                        I worked under the Collaborative Robotics Lab to add ML support to a robot teaching interface.
-                                    </p>
-                                </div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <!-- <span class="experience_line"></span> -->
-                                </div>
-                            </div>
-
-                            <!-- Experience 4 -->
-                            <!-- <div class="experience_data">
-                                <div></div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                    <span class="experience_line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="experience_title">
-                                        Undergraduate Teaching Assistant
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Brown University
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        09/2021-Present
-                                    </div>
-                                    <p class="experience_content">
-                                        CS1410 Artificial Intelligence: I designed an adversarial multiplayer game based on Pax-Con as the course's final project; teaching knowledge representation and search, optimization, and machine learning algorithms.
-
-                                        <br><br>
-                                        CS0320 Software Engineering: I designed curriculum featuring screen reader development and accessibility; held weekly office hours and mentor meetings for over 200 students, teaching Java, Typescript, and React.
-                                        <br><br>
-                                        CS0100 Data Fluency: I led discussion sections and labs for over 60 students to reLearn and practice computational techniques in data science; assisted with course preparation tailored towards non-concentrators.
-                                    </p>
-                                </div>
-                            </div> -->
-
-                            <!-- Experience 5 -->
-                            <!-- <div class="experience_data">
-                                <div>
-                                    <h3 class="experience_title">
-                                        Research Assistant
-                                    </h3>
-                                    <span class="experience_subtitle">
-                                        Brown University
-                                    </span>
-                                    <div class="experience_calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        06/2021-Present
-                                    </div>
-                                    <p class="experience_content">
-                                        Reinforcement Learning and Behavior Lab: I built a visual programming editor with Blockly to support non-technical users in interacting with RL systems based on the trigger-action programming paradigm.
-                                        <br><br>
-                                        Intelligent Robot Lab: I helped develop RLang, a declarative language to express prior knowledge to reinforcement learning agents, further integrating symbolic information structures into RL algorithms to improve learning.
-                                    </p>
-                                </div>
-                                <div>
-                                    <span class="experience_rounder"></span>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <!-- <section class="skills section" id="skills">
-                <h2 class="section_title">Skills</h2>
-                <span class="section_subtitle">My technical level</span>
-            </section> -->
-
-            <!--==================== CONTACT ME ====================-->
-            <!-- <section class="contact section" id="contact">
-                <h2 class="section_title">Get in touch!</h2>
-                <span class="section_subtitle">Don't worry, I don't bite</span>
-
-                <div class="contact_container container grid">
-                    <div>
-                        <div class="contact_information">
-                            <i class="uil uil-phone contact_icon"></i>
-                           <div>
-                                <h3 class="contact_title">Cell</h3>
-                                <span class="contact_subtitle">617-356-6076</span>
-                           </div>
-                        </div>
-                        <div class="contact_information">
-                            <i class="uil uil-envelope contact_icon"></i>
-                           <div>
-                                <h3 class="contact_title">Email</h3>
-                                <span class="contact_subtitle">jennifer_wang2@brown.edu</span>
-                           </div>
-                        </div>
-                        <div class="contact_information">
-                            <i class="uil uil-map-marker contact_icon"></i>
-                           <div>
-                                <h3 class="contact_title">Location</h3>
-                                <span class="contact_subtitle">69 Brown St., Mail #8924 <br>Providence RI</span>
-                           </div>
-                        </div>
-                    </div>
-                    <form class="contact_form grid" name="contact" netlify>
-                        <div class="contact_inputs grid">
-                            <div class="contact_content">
-                                <label for="" class="contact_label" name="name">Name</label>
-                                <input type="text" class="contact_input" name="name" required>
-                            </div>
-                            <div class="contact_content">
-                                <label for="" class="contact_label" name="email">Email</label>
-                                <input type="email" class="contact_input" name="email" required>
-                            </div>
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label" name="subject">Subject</label>
-                            <input type="text" class="contact_input" name="subject" required>
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label" name="message">Message</label>
-                            <textarea id="" cols="00" rows="7" class="contact_input" name="message" required></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="button button-flex">
-                                Send Message
-                                <i class="uil uil-message button_icon"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section> -->
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer_bg">
-                <div class="footer_container container grid">
-                    <div>
-                        <a href="#">
-                        <h1 class="footer_title">
-                            JW
-                        </h1>
-                        </a>
-                        <!-- <span class="footer_subtitle">
-                            Student Researcher
-                        </span> -->
-                    </div>
-
-                    <ul class="footer_links">
-                        <li>
-                            <a href="#publications" class="footer_link">Publications</a>
-                        </li>
-                        <li>
-                            <a href="#experience" class="footer_link">Experience</a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="footer_link">Projects</a>
-                        </li>
-                        <!-- <li>
-                            <a href="#contact" class="footer_link">Contact</a>
-                        </li> -->
-                    </ul>
-
-                    <div class="footer_socials">
-                        <a href="https://www.linkedin.com/in/jennifer-wang-b156b81b1/" target="_blank" class="footer_social">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://github.com/jennjwang" target="_blank" class="footer_social">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                        <a href="https://www.yelp.com/user_details?userid=ad__FNspVncH11CKbaeYXA" target="_blank" class="footer_social">
-                            <i class="fa-brands fa-yelp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup_icon"></i>
-        </a>
-
-        <!--==================== SWIPER JS ====================-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
-    </html>
+</main>
+</body>
+</html>
