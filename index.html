@@ -187,6 +187,18 @@ h1{text-shadow:3px 3px 0 var(--pink)}
 .photo-wrap .photo{position:relative;width:100%;height:100%;margin:0;border-radius:0;box-shadow:none;clip-path:url(#blob)}
 @media (prefers-color-scheme: dark){:root{--pink:#7a3a63;--grain:.12} body::before{mix-blend-mode:screen}}
 @media (max-width:680px){.photo-wrap{width:196px;height:196px;margin-top:0}.photo-ink{transform:translate(10px,9px) rotate(4deg)} h1{text-shadow:2px 2px 0 var(--pink)}}
+/* ---- chocolate + light blue ---- */
+:root{--bg:#fbfaf8;--ink:#2f1d14;--soft:#4f3a2f;--muted:#857065;--rule:#e9e1db;--accent:#5b3424;--pink:#b7d7f2}
+.bio a{background-image:linear-gradient(#cfe4f6,#cfe4f6)}
+.pubs .tag{background:#dcebf7;color:#5b3424}
+.links a{color:var(--accent)}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#3a2419;--ink:#f3ebe4;--soft:#dccdc2;--muted:#b49f91;--rule:#55392b;--accent:#a9d1f2;--pink:#6b4433;--grain:.12}
+  body::before{mix-blend-mode:screen}
+  .bio a{background-image:linear-gradient(rgba(169,209,242,.35),rgba(169,209,242,.35))}
+  .pubs .tag{background:#a9d1f2;color:#3a2419}
+  .photo-ink{background:#a9d1f2}
+}
   </style>
 </head>
 <body>
