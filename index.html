@@ -111,7 +111,8 @@
     .news .date { color: var(--muted); font-size: 15px; letter-spacing: 0.06em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 
     /* Publications */
-    .note { color: var(--muted); font-size: 15px; font-style: italic; margin: 0 0 22px; }
+    .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .note { color: var(--muted); font-size: 15px; font-style: italic; }
     .pubs li { display: grid; grid-template-columns: 104px 1fr; gap: 14px; margin-bottom: 26px; }
     .pubs .tag {
       font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -193,9 +194,8 @@
   </section>
 
   <section class="pubs" aria-labelledby="pubs-h">
-    <h2 id="pubs-h">Publications</h2>
+    <div class="sec-head"><h2 id="pubs-h">Publications</h2><span class="note">* denotes equal contribution</span></div>
     <div>
-      <p class="note">* denotes equal contribution</p>
       <ul>
         <li>
           <span class="tag">NBER '26</span>
